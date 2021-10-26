@@ -1,0 +1,68 @@
+footer {
+
+  padding-top: 7.2rem;
+  padding-bottom: 4.6rem;
+  background-color: $background-footer;
+  z-index: 7;
+  .container {
+
+    @include flex(column, center, center);
+    p {
+      width: 100%;
+      max-width: 34.9rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.4rem;
+      line-height: 40px;
+      color: $primary-grey-darken;
+      text-align: center;
+      margin-bottom: 6.5rem;
+    }
+
+    .redes-socias {
+      width: 28.7rem;
+      @include flex(row, center, space-between);
+      .social {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        a {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 30px;
+          text-align: center;
+          color: rgba(91, 94, 101, 0.575);
+          margin-top: 1.3rem;
+          transition: all .3s;
+          &:hover {
+            color: #5B5E65;
+          }
+        }
+      }
+    }
+
+    span {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 30px;
+      color: $primary-grey-darken;
+      margin-top: 5.8rem;
+      strong {
+        
+        color: $primary-pink;
+      }
+    }
+  }
+  @include responsive(468px) {
+    .container {
+      .redes-socias {
+        .social {
+          img {
+            max-width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

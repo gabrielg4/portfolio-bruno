@@ -1,0 +1,92 @@
+.s-hero {
+  padding-top: 13.1rem;
+  .container {
+    @include flex(row, center, space-between);
+    .right {
+      h1 {
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 42px;
+        margin-bottom: 2.6rem;
+        color: $primary-pink;
+      } 
+      p {
+        width: 100%;
+        max-width: 47.4rem;
+        font-size: 2.5rem;
+        line-height: 35px;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      span {
+        font-size: 1.8rem;
+        line-height: 40px;
+        color: #FFFFFF;
+      a {
+        font-size: 1.8rem;
+        color: #00BFA5;
+        font-weight: 600;
+        transition: all .3s;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      }
+    }
+    object {
+      width: 100%;
+      max-width: 90rem;
+      margin-bottom: -17rem;
+    }
+  }
+
+  @include responsive(1100px) {
+    .container {
+      object {
+        margin-bottom: -14rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      flex-direction: column;
+      .right {
+        h1,
+        p{
+          text-align: center;
+        }
+        span {
+          @include flex(row, center, center);
+          a {
+            margin-left: 0.8rem;
+          }
+        }
+      }
+      object {
+        margin-bottom: -10rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+  @include responsive(768px) {
+    .container {
+      object {
+        margin-bottom: -6rem;
+      }
+    }
+  }
+
+  @include responsive(468px) {
+    .container {
+      .right {
+        p {
+          max-width: 100%;
+          font-size: 2rem;
+        }
+      }
+      object {
+        margin-bottom: -5rem;
+      }
+    }
+  }
+}
